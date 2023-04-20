@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Marvel_Sups/static/css/main.c906dd16.css",
+    "main.js": "/Marvel_Sups/static/js/main.8b425568.js",
+    "static/media/bg.jpg": "/Marvel_Sups/static/media/bg.4420ae27e7c5cce6bdeb.jpg",
+    "static/media/marvel-logo.jpg": "/Marvel_Sups/static/media/marvel-logo.11761ff58388745816e7.jpg",
+    "index.html": "/Marvel_Sups/index.html",
+    "main.c906dd16.css.map": "/Marvel_Sups/static/css/main.c906dd16.css.map",
+    "main.8b425568.js.map": "/Marvel_Sups/static/js/main.8b425568.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c906dd16.css",
+    "static/js/main.8b425568.js"
+  ]
+}
