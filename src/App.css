@@ -1,38 +1,234 @@
-.App {
-  text-align: center;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body{
+background-image: radial-gradient(rgba(
+  0,0,0,0.9), rgba(0,0, 0, 0.9)), url('../public/images/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#navbarNavAltMarkup .navbar-nav a
+{
+ 
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+.navbar-expand-lg .navbar-collapse 
+{
+  justify-content: flex-end;
+}
+.navbar-nav{
+  margin: 0px 25px 0 25px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+}
+ 
+.navbar-nav .nav-link 
+{ 
+  margin: 0 10px;
+}
+.container1
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 10px;
+}
+.card 
+{
+	height: 450px;
+  margin: 10px;
+  padding: 10px;
+	border-radius: 15px;
+  margin: 18px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+	padding: 1.5rem;
+  background:rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+	position: relative;
+	transition: 0.4s ease-out;
+	box-shadow: 0px 7px 10px rgba(black, 0.5);
+  color: honeydew;
+}
+.card:hover
+{
+	transform: translateY(20px)
+}
+.card:hover:before {
+  opacity: 1;
+}
+.card:hover .card-body {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  transition: 0.5s;
+  opacity: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-img-top
+{
+  /* width: 100%;
+  margin-top: 10px;
+  height: 300px;
+  border-radius: 18px; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-body
+{
+  position: relative;
+  z-index: 3;
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s;
+  width: 100%;
+  padding: 2px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.favbar
+{
+  font-size: 25px;
+  text-decoration: none;
+    font-weight: 700;
+    color: white;
+    background: crimson;
+    padding: 2px 10px;
+    border: none;
+    border-radius: 11px;
+}
+.favbar:hover
+{
+  border-bottom: 4px solid honeydew;
+  color: aliceblue;
+}
+.card-body .btn-add
+{
+  margin-top: 65%;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  color: whitesmoke;
+  background-color: crimson;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 20px;
+  text-align: center;
+  padding: 1px 10px;
+}
+.card-body .btn-add:hover
+{
+  background: (url("/public/images/marvel-logo.jpg")) no-repeat;
+ -webkit-background-clip: text;
+ background-clip: text;
+ color: transparent;
+}
+.card-title
+{
+  letter-spacing: 2px;
+  font-size: 20px;
+  margin-top: 8px;
+}
+.navbar1
+{
+  padding-top: 15px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar1 .btn-group button
+{
+  outline: none;
+  border: none;
+  padding: 5px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  background-color:crimson;
+  color: honeydew;
+  font-size: 18px;
+  font-weight: 600;
+} 
+.navbar1 .btn-group 
+{
+  padding: 5px;
+  border-radius: 10px;
+  background-color:crimson;
+  width: 700px;
+  display: flex;
+  justify-content: space-evenly;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar1 .btn-group button:active
+{
+  border-bottom: 4px solid honeydew;
 }
+.navbar1 .btn-group button:hover
+{
+  border-bottom: 4px solid honeydew;
+}
+.card-body .dot
+{
+  background: #ffffff;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  height: 5px;
+  margin: 0 5px;
+  vertical-align: 2px;
+  width: 5px;
+}
+.card-body .year
+{
+  color:honeydew;
+  display: block;
+  font-size: .9em;
+  overflow: hidden;
+}
+.btn-group__item:after {
+  content: "✔️";
+  margin-left: 0.5rem;
+  display: inline-block;
+  color: rebeccapurple;
+  position: absolute;
+  transform: translatey(10px);
+  opacity: 0;
+  transition: all 200ms ease-out;
+  }
+  .container
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:antiquewhite;
+    flex-direction: column;
+  }
